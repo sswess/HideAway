@@ -1,0 +1,148 @@
+/* reset global default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: grey;
+}
+
+/* set header logo image as background and box shadow for 3D effect */
+.header {
+  background-color: white;
+  background-size: auto 30px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-image: url("https://www.android.com/intl/en_us/new/images/logos-2x/android-wordmark-8EC047.png");
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
+}
+
+/* this is how to get 3D effect */
+.learn > .card {    
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.35);
+}
+
+/* You dont' need to change CSS above, but feel to do so */
+/* You are NOT allowed to change HTML code */
+/* Please implement your own CSS to make page look like pictures shown in exam */
+/* Please use the comments below to guide you through the process */
+/* Total points of this exam is 30 */
+
+
+/* TODO - set header display and width to occupy the whole row */
+
+.header {
+  height: 100px;
+  width:100%;
+  padding: 16px;
+  text-align: right;
+}
+
+/* set header links (3 points) */
+/* TODO - set header links display to share the row with 16px padding */
+.header > .nav > a {
+  font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:16px;
+
+}
+
+/* hide label and checkbox (1 points) */
+.header > label {
+  display:none;
+}
+.header > input {
+  display:none;
+}
+
+/* set learn module (2 points) */
+/* TODO - set learn module display, width to occupy the whole row */
+.learn {
+  width:100%;
+  display:100%;
+  padding: 24px;
+  text-align:center;
+}
+
+/* set each card size (2 points) */
+/* TODO - set card display to share the row */
+
+.learn > .card {
+  width:25%;
+  height:560px;
+  vertical-align:top;
+  margin:16px;
+}
+
+/* set card image (1 point) */
+.learn > .card > img {
+  display:100%;
+  width:100%;
+   margin-bottom:12px;
+}
+
+/* set card text (1 points) */
+/* TODO - set card text display to occupy the whole row with 16px padding */
+
+.learn > .card > span {
+  width:100%;
+  padding:16px;
+  font-size:18px;
+}
+
+/* set card links (2 point) */
+.learn > .card > a {
+  display: inline-block;
+  margin:16px;
+  color:green;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Responsive design for smaller screen with size less than 800px */
+@media screen and (max-width: 800px) {
+
+  /* display one card per row with 70% width (2 point) */
+  .learn > .card {
+    width:70%;
+  }  
+
+  /* display label as menu icon (3 poitns) */
+  .header > label {
+    display: inline-block;
+    width:48px;
+    height:48px;
+    background-size: contain;
+
+    /* use menu icon as background image for label */
+    background-image: url("https://cdn4.iconfinder.com/data/icons/flat-black/128/menu.png");
+  }
+  
+  /* hide nagivation links (1 point) */
+  .header > .nav {
+    display:none;
+  }
+  
+  /* set header as coordinate origin (2 point) */
+  .header {
+    position: relative;
+  }
+  
+  /* Display nav links when checkbox is checked (6 points) */
+  .header > input:checked + .nav {
+     display: block;
+     position: absolute;
+     right: 0px;
+     top: 80px;
+     z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* show navigation links as a list (1 point) */
+  /* TODO - set display block with 24px margin and text color white */
+  .header > .nav > a {
+    display:block;
+    margin:24px;
+    color:white;
+  }  
+}
